@@ -90,4 +90,62 @@ C = np.dot(A[2,:],B[:,3]);
 print(C)
 C = np.dot(A,B);
 print(C)
+
+# Matrix Vector Multiplicaiton to get C Matrix
+print('A =')
+print(colors.fg.red)
+print('{:2d} {:2d} {:2d} {:2d} {:2d}'.format(A[0,0],A[0,1],A[0,2],A[0,3],A[0,4]))
+print('{:2d} {:2d} {:2d} {:2d} {:2d}'.format(A[1,0],A[1,1],A[1,2],A[0,3],A[1,4]))
+print('{:2d} {:2d} {:2d} {:2d} {:2d}'.format(A[2,0],A[2,1],A[2,2],A[0,3],A[2,4]))
+print('{:2d} {:2d} {:2d} {:2d} {:2d}'.format(A[3,0],A[3,1],A[3,2],A[0,3],A[3,4]))
+print('{:2d} {:2d} {:2d} {:2d} {:2d}'.format(A[4,0],A[4,1],A[4,2],A[0,3],A[4,4]))
+
+
+print('B = \n')
+clr1 = colors.fg.blue; 
+clr2 = colors.reset; 
+
+print('{}{:2d}{} {:2d} {:2d} {:2d} {:2d}'.format(clr1,B[0,0],clr2,B[0,1],B[0,2],B[0,3],B[0,4]))
+print('{}{:2d}{} {:2d} {:2d} {:2d} {:2d}'.format(clr1,B[1,0],clr2,B[1,1],B[1,2],B[1,3],B[1,4]))
+print('{}{:2d}{} {:2d} {:2d} {:2d} {:2d}'.format(clr1,B[2,0],clr2,B[2,1],B[2,2],B[2,3],B[2,4]))
+print('{}{:2d}{} {:2d} {:2d} {:2d} {:2d}'.format(clr1,B[3,0],clr2,B[3,1],B[3,2],B[3,3],B[3,4]))
+print('{}{:2d}{} {:2d} {:2d} {:2d} {:2d}'.format(clr1,B[4,0],clr2,B[4,1],B[4,2],B[4,3],B[4,4]))
+print('\n')
+print('{:2d} {}{:2d}{} {:2d} {:2d} {:2d}'.format(B[0,0],clr1,B[0,1],clr2,B[0,2],B[0,3],B[0,4]))
+print('{:2d} {}{:2d}{} {:2d} {:2d} {:2d}'.format(B[1,0],clr1,B[1,1],clr2,B[1,2],B[1,3],B[1,4]))
+print('{:2d} {}{:2d}{} {:2d} {:2d} {:2d}'.format(B[2,0],clr1,B[2,1],clr2,B[2,2],B[2,3],B[2,4]))
+print('{:2d} {}{:2d}{} {:2d} {:2d} {:2d}'.format(B[3,0],clr1,B[3,1],clr2,B[3,2],B[3,3],B[3,4]))
+print('{:2d} {}{:2d}{} {:2d} {:2d} {:2d}'.format(B[4,0],clr1,B[4,1],clr2,B[4,2],B[4,3],B[4,4]))
+print('\n.\n.')
+
+
+
+C1 = np.dot(A,B[:,0]);
+C2 = np.dot(A,B[:,1]);
+C3 = np.dot(A,B[:,2]);
+C4 = np.dot(A,B[:,3]);
+
+print("C[:,1]:");
+print(colors.fg.purple);
+print('{:2d}\n{:2d}\n{:2d}\n{:2d}\n{:2d}'.format(C1[0],C1[1],C1[2],C1[3],C1[4]));
+print(colors.reset);
+
+print("C[:,2]:");
+print(colors.fg.purple);
+print('{:2d}\n{:2d}\n{:2d}\n{:2d}\n{:2d}'.format(C2[0],C2[1],C2[2],C1[3],C2[4]));
+print(colors.reset);
+
+print("C[:,3]:");
+print(colors.fg.purple);
+print('{:2d}\n{:2d}\n{:2d}\n{:2d}\n{:2d}'.format(C3[0],C3[1],C3[2],C3[3],C3[4]));
+print(colors.reset);
+
+print("C[:,4]:");
+print(colors.fg.purple);
+print('{:2d}\n{:2d}\n{:2d}\n{:2d}\n{:2d}'.format(C4[0],C4[1],C4[2],C4[3],C4[4]));
+print(colors.reset);
+
+C = (C1,C2,C3,C4);
+C = np.asmatrix(C)
+print(C)
 ```
